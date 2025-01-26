@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "aa798627-89c4-4f57-8523-fcf74cb80d5c",
+		"name": "com.trunghieu.demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15412727"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "GetStudents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student/student-by-id/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student",
+								"student-by-id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mac Dinh 5\",\r\n    \"address\": \"Binh Thanh 5\",\r\n    \"phone\": \"016556322\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student/add-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student",
+								"add-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"7\",\r\n    \"name\": \"Mac Dinh 8\",\r\n    \"address\": \"Binh Thanh 8\",\r\n    \"phone\": \"042421\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student/update-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student",
+								"update-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student/delete-student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student",
+								"delete-student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "instructor",
+			"item": [
+				{
+					"name": "GetInstructors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/instructor/instructors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"instructor",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddInstructor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Instructor 1\",\r\n    \"address\": \"Instructor 1\",\r\n    \"phone\": \"016556322\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/instructor/add-instructor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"instructor",
+								"add-instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInstructorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/instructor/instructor-by-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"instructor",
+								"instructor-by-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateInstructor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"name\": \"Instructor 2\",\r\n    \"address\": \"Instructor 2\",\r\n    \"phone\": \"016556322\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/instructor/update-instructor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"instructor",
+								"update-instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteInstructor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/instructor/delete-instructor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"instructor",
+								"delete-instructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "department",
+			"item": [
+				{
+					"name": "GetDepartments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/department/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"department",
+								"departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDepartmentByCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/department/department-by-code/c3281be8-d69c-4e7b-98de-4c04e52c629c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"department",
+								"department-by-code",
+								"c3281be8-d69c-4e7b-98de-4c04e52c629c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddDepartment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"IT Department\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/department/add-department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"department",
+								"add-department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDepartment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"7601f892-d959-4222-b46b-ddc409272b1a\",\r\n    \"name\" : \"IT Department 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/department/update-department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"department",
+								"update-department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteInstructor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/department/delete-department/c254098e-b1f3-41d0-96bd-77867a9f67b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"department",
+								"delete-department",
+								"c254098e-b1f3-41d0-96bd-77867a9f67b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "GetCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/course/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"course",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"New Course\",\r\n    \"description\": \"New Course Description\",\r\n    \"departmentCode\" : \"08c86d81-9ba1-4d1c-8bfd-a9500d0bd263\",\r\n    \"instructorId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/course/add-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"course",
+								"add-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCourse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"acb0e00d-575e-4164-858b-39b499deecf3\",\r\n    \"title\" : \"New Course 2\",\r\n    \"description\": \"New Course Description 2\",\r\n    \"departmentCode\" : \"08c86d81-9ba1-4d1c-8bfd-a9500d0bd263\",\r\n    \"instructorId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/course/update-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"course",
+								"update-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCourseByCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/course/course-by-code/acb0e00d-575e-4164-858b-39b499deecf3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"course",
+								"course-by-code",
+								"acb0e00d-575e-4164-858b-39b499deecf3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/course/delete-course/acb0e00d-575e-4164-858b-39b499deecf3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"course",
+								"delete-course",
+								"acb0e00d-575e-4164-858b-39b499deecf3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student_course",
+			"item": [
+				{
+					"name": "AddStudentCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": \"1\",\r\n    \"courseCode\": \"ffeffacf-df4d-4ca7-81e8-9c02db27b36a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student-course/add-student-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student-course",
+								"add-student-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudentCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": \"1\",\r\n    \"courseCode\": \"ffeffacf-df4d-4ca7-81e8-9c02db27b36a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student-course/delete-student-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student-course",
+								"delete-student-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindStudentCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": \"1\",\r\n    \"courseCode\": \"429095fe-17e7-4ee9-856f-d28b8bb9e72a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student-course/find-student-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student-course",
+								"find-student-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentIncludeCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trunghieu/student-course/students-include-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trunghieu",
+								"student-course",
+								"students-include-course"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root-url",
+			"value": "http://localhost:8080/api/trunghieu/",
+			"type": "string"
+		},
+		{
+			"key": "url-student",
+			"value": "student/",
+			"type": "string"
+		},
+		{
+			"key": "url-instructor",
+			"value": "instructor/",
+			"type": "string"
+		}
+	]
+}
