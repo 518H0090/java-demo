@@ -4,10 +4,7 @@ import com.trunghieu.producer.stream.StreamDemoConsumer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/trunghieu/producer")
@@ -18,15 +15,15 @@ public class ProducerController {
 
     @PostMapping
     @RequestMapping("publish")
-    public ResponseEntity<? extends HttpStatus> StartPublish() {
-        streamDemoConsumer.ConsumerStreamAndPublish();
+    public ResponseEntity<? extends HttpStatus> StartPublish(@RequestHeader(name = "KeycloakToken") String token) {
+        streamDemoConsumer.ConsumerStreamAndPublish(token);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping
     @RequestMapping("publish-json")
-    public ResponseEntity<? extends HttpStatus> StartPublishJson() {
-        streamDemoConsumer.ConsumerStreamAndPublishJson();
+    public ResponseEntity<? extends HttpStatus> StartPublishJson(@RequestHeader(name = "KeycloakToken") String token) {
+        streamDemoConsumer.ConsumerStreamAndPublishJson(token);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

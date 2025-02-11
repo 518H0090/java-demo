@@ -17,9 +17,6 @@ public class StreamDemoConsumer {
 
     private final DemoJsonProducer jsonProducer;
 
-    @Value("${spring.application.token}")
-    private String TOKEN_DEMO;
-
     public StreamDemoConsumer(WebClient.Builder webClientBuilder, DemoProducer producer, DemoJsonProducer jsonProducer) {
         this.webClient = webClientBuilder.baseUrl("http://localhost:8086/api/trunghieu/student")
                 .build();
@@ -27,19 +24,19 @@ public class StreamDemoConsumer {
         this.jsonProducer = jsonProducer;
     }
 
-    public void ConsumerStreamAndPublish() {
+    public void ConsumerStreamAndPublish(String token) {
         webClient.get()
                 .uri("/students")
-                .header("Authorization", "Bearer " + TOKEN_DEMO)
+                .header("Authorization", "Bearer " + token)
                 .retrieve()
                 .bodyToFlux(String.class)
                 .subscribe(producer::send);
     }
 
-    public void ConsumerStreamAndPublishJson() {
+    public void ConsumerStreamAndPublishJson(String token) {
         webClient.get()
                 .uri("/students")
-                .header("Authorization", "Bearer " + TOKEN_DEMO)
+                .header("Authorization", "Bearer " + token)
                 .retrieve()
                 .bodyToFlux(Student.class)
                 .subscribe(jsonProducer::send);
